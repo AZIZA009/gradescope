@@ -1,1 +1,91 @@
-lab8
+// Problem 1
+
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+    float frh, cel;
+		cout << "\n\n Convert temperature in Celsius to Fahrenheit :\n";
+		cout << "---------------------------------------------------\n";	
+    cout << " Input the temperature in Celsius : ";
+    cin >> cel;
+    frh = (cel * 9.0) / 5.0 + 32;
+    cout << " The temperature in Celsius    : " << cel << endl;
+    cout << " The temperature in Fahrenheit : " << frh << endl;
+	cout << endl;
+    return 0;
+}
+
+// Problem 2
+
+#include <iostream>
+using namespace std;
+ 
+void result(int N)
+{    
+    
+    for (int num = 0; num < N; num++)
+    {    
+       
+        if (num % 3 == 0 && num % 5 == 0)
+            cout << num << " ";
+    }
+}
+
+int main()
+{    
+    int N = 100;
+     
+   
+    result(N);
+    return 0;
+}
+
+// Problem 3
+
+#include <iostream>
+const double pi = 3.14;
+using namespace std;
+  
+float findArea(float r)
+{
+    return (pi * r * r);
+}
+
+int main()
+{
+    float r, Area;
+    r = 5;
+  
+    
+    Area = findArea(r);
+    
+    cout << "Area of Circle is :" << Area;
+    return 0;
+}
+
+// Problem 4
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    long factorial = 1.0;
+
+    cout << "Enter a positive integer: ";
+    cin >> n;
+
+    if (n < 0)
+        cout << "Error! Factorial of a negative number doesn't exist.";
+    else {
+        for(int i = 1; i <= n; ++i) {
+            factorial *= i;
+        }
+        cout << "Factorial of " << n << " = " << factorial;    
+    }
+
+    return 0;
+}
+
